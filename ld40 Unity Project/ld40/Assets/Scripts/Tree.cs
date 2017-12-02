@@ -7,6 +7,8 @@ public class Tree : MonoBehaviour {
 
     public float minSize;
     public float maxSize;
+
+    public GameObject orb;
 	// Use this for initialization
 	void Start () {
 
