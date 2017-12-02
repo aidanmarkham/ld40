@@ -30,8 +30,8 @@ public class DayNight : MonoBehaviour {
         }
         sun.transform.rotation = Quaternion.Euler(time * 360,0,0);
 
-        starColor.a = -Mathf.Sin(time * (2 *  Mathf.PI));
-
+        starColor.a = Mathf.Clamp(-Mathf.Sin(time * (2 *  Mathf.PI))* 3, 0, 1);
+        sun.GetComponent<Light>().intensity = Mathf.Clamp(Mathf.Sin(time * (2 * Mathf.PI)) * 3, 0, .69f);
         starMat.color = starColor;
 	}
 }
