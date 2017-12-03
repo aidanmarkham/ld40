@@ -21,9 +21,11 @@ GameObject:
   - component: {fileID: 4918117832944890}
   - component: {fileID: 143907851820227410}
   - component: {fileID: 114927417176774218}
-  m_Layer: 0
+  - component: {fileID: 135930065527212542}
+  - component: {fileID: 114506522918514496}
+  m_Layer: 9
   m_Name: Crab
-  m_TagString: Untagged
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39,7 +41,7 @@ GameObject:
   - component: {fileID: 33866606297455246}
   - component: {fileID: 23031312924753926}
   - component: {fileID: 95986071456497462}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Crab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66,8 +68,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1661470280826814}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -44, y: 3.2, z: 17}
-  m_LocalScale: {x: 0.13713264, y: 0.1371327, z: 0.1371327}
+  m_LocalPosition: {x: -44.39, y: 3.8515863, z: -30.714668}
+  m_LocalScale: {x: 0.13713264, y: 0.13713276, z: 0.13713276}
   m_Children:
   - {fileID: 4464511585701346}
   m_Father: {fileID: 0}
@@ -130,6 +132,23 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114506522918514496
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1661470280826814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4899ca00742bd54ebb97303da7147d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Crab
+  hp: 1
+  uiItem: {fileID: 0}
+  location: {x: 602, y: 339, z: 0}
+  canvas: {fileID: 0}
+  toDestroy: {fileID: 1661470280826814}
 --- !u!114 &114927417176774218
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -146,6 +165,18 @@ MonoBehaviour:
   rotation: 15
   rotationSpeed: 0
   rotDampening: 0.9
+--- !u!135 &135930065527212542
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1661470280826814}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2.39
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!143 &143907851820227410
 CharacterController:
   m_ObjectHideFlags: 1

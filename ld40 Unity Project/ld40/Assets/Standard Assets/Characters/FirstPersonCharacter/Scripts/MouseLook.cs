@@ -49,7 +49,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             else
             {
                 character.localRotation = m_CharacterTargetRot;
-                camera.localRotation = m_CameraTargetRot;
+                camera.transform.localRotation = m_CameraTargetRot;
             }
 
             UpdateCursorLock();

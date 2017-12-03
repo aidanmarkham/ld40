@@ -14,6 +14,7 @@ public class DayNight : MonoBehaviour {
     public Color starColor;
 
     public GameObject sun;
+    public AudioSource[] daySounds;
 	// Use this for initialization
 	void Start () {
 		
@@ -32,6 +33,10 @@ public class DayNight : MonoBehaviour {
 
         starColor.a = Mathf.Clamp(-Mathf.Sin(time * (2 *  Mathf.PI))* 3, 0, 1);
         sun.GetComponent<Light>().intensity = Mathf.Clamp(Mathf.Sin(time * (2 * Mathf.PI)) * 3, 0, .69f);
+        for(int i = 0; i < daySounds.Length; i++)
+        {
+            daySounds[i].volume = Mathf.Clamp(Mathf.Sin(time * (2 * Mathf.PI)) * 1, 0, .69f);
+        }
         starMat.color = starColor;
 	}
 }

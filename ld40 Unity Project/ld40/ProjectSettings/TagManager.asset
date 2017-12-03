@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - GameManager
+  - Destructable
+  - Menu
+  - Orb Manager
+  - OrbManager
+  - Plane
   layers:
   - Default
   - TransparentFX
@@ -14,7 +20,7 @@ TagManager:
   - 
   - 
   - InvisibleWalls
-  - 
+  - Destructables
   - 
   - 
   - 

@@ -1,10 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Cinemachine;
 public class Telescope : MonoBehaviour {
 
-    public Camera fpsCam;
+    public CinemachineVirtualCamera fpsCam;
     public GameObject overlay;
 
     public float fov;
@@ -14,7 +14,7 @@ public class Telescope : MonoBehaviour {
     public bool zoomed;
 	// Use this for initialization
 	void Start () {
-        fpsCam.fieldOfView = fov;
+        fpsCam.m_Lens.FieldOfView = fov;
         overlay.SetActive(false);
     }
 	
@@ -25,14 +25,19 @@ public class Telescope : MonoBehaviour {
 
         if(hasTelescope && zoomed)
         {
-            fpsCam.fieldOfView = zoomFOV;
+            fpsCam.m_Lens.FieldOfView = zoomFOV;
             overlay.SetActive(true);
         }
         else
         {
-            fpsCam.fieldOfView = fov;
+            fpsCam.m_Lens.FieldOfView = fov;
             overlay.SetActive(false);
         }
         
 	}
+
+    public void EnableTelescope()
+    {
+        hasTelescope = true;
+    }
 }
